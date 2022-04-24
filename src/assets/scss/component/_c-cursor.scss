@@ -1,0 +1,53 @@
+@include pc {
+    .c-cursor,
+    .c-follower {
+        border-radius: 50%;
+        position: absolute;
+        top: 0;
+        left: 0; 
+        pointer-events: none;
+        transform: translate(-50%,-50%);
+    }
+    
+    .c-cursor {
+        width: 6px;
+        height: 6px;
+        background-color: $color-global;
+        background-image: none;
+        background-repeat: no-repeat;
+        background-position: center;
+        z-index: 2001;
+        transition: width ease 0.2s, height ease 0.2s, background-image ease 0.2s;
+    
+        &.is-active {
+            width: 12px;
+            height: 12px;
+        }
+
+        &.is-activeArrow {
+            width: 60px;
+            height: 60px;
+            background-color: transparent;
+            background-image: url("/assets/img/common/icon_arrow_brown-02.svg");
+        }
+    }
+    
+    .c-follower {
+        width: 40px;
+        height: 40px;
+        background-color: transparent;
+        border: 1px solid $color-global-border;
+        z-index: 2000;
+        transition: width ease 0.2s, height ease 0.2s, transform linear 0.3s;
+        
+        &.is-active {
+            width: 80px;
+            height: 80px;
+        }
+
+        &.is-activeArrow {
+            width: 160px;
+            height: 160px;
+        }
+    }
+}

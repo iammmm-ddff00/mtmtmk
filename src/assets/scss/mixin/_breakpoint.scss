@@ -1,0 +1,59 @@
+/* ++++++++++++++++++++
+- Media
+++++++++++++++++++++ */
+
+//@include sp320{}
+@mixin sp320 {
+    @media screen and (max-width: 320px) {
+      @content;
+    }
+  }
+  
+  //@include spNarrow{}
+  @mixin spNarrow {
+    @media screen and (max-width: 374px) {
+      @content;
+    }
+  }
+  
+  //@include spOnly{}
+  @mixin spOnly {
+    @media screen and (max-width: 767px) {
+      @content;
+    }
+  }
+  
+  //@include sp{}
+  @mixin sp {
+    @media screen and (max-width: 979px) {
+      @content;
+    }
+  }
+  
+  //@include tb{}
+  @mixin tb {
+    @media screen and (min-width: 768px) {
+      @content;
+    }
+  }
+  
+  //@include pc{}
+  @mixin pc {
+    @media screen and (min-width: 980px) {
+      @content;
+    }
+  }
+  
+  //@include wide{}
+  @mixin wide {
+    @media screen and (min-width: 1440px) {
+      @content;
+    }
+  }
+  
+  //@include IE{}
+  @mixin IE {
+    @media screen and (-ms-high-contrast: none) {
+      @content;
+    }
+  }

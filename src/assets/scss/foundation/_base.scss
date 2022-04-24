@@ -1,0 +1,38 @@
+html {
+    -webkit-text-size-adjust: 100%; 
+    -ms-text-size-adjust: 100%;
+    -webkit-font-smoothing: antialiased; 
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+    height: 100%;
+}
+  
+body {
+    @include font-en_light;
+    line-height: 1.5;
+    color: $color-global;
+    background-color: $color-global-bg;
+}
+
+html,
+body {
+    @include pc {
+        cursor: none;
+    }
+}
+
+a {
+    color: inherit;
+    @include pc {
+        cursor: none;
+    }
+}
+
+img {
+    display: block;
+    width: 100%;
+}
+
+li {
+    list-style-type:none;	
+}

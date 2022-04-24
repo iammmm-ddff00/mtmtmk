@@ -1,0 +1,43 @@
+extend ../_common/_layout
+
+append value
+    - var title= "Works | matsumoto mika";
+    - var description= "ディスクリプション";
+
+block content
+    include ../_common/_header.pug
+    .p-works
+        .p-works__contents
+            .p-works__head
+                h1.c-title.js-page-title Works
+            .p-works__body.js-trigger
+                ul.p-works__list
+                    -
+                        var list = [
+                            {
+                                url: 'https://www.kanucha.jp/acczone/',
+                                src: '/assets/img/works/img_acczone_pc.jpg',
+                                title: 'ACC ZONE',
+                                taglist: 'html / css / javascript / gulp',
+                                date: '2020.10-2020.11',
+                            },
+                            {
+                                url: 'https://kindai-koyu.jp/',
+                                src: '/assets/img/works/img_kindaikoyu_pc.jpg',
+                                title: 'KINDAI Alumni',
+                                taglist: 'html / css / javascript',
+                                date: '2020.1-2020.2',
+                            },
+                        ]
+                    each item in list
+                        li.p-works__item
+                            a.p-works__itemLink.js-link(href=`${item.url}` target="_blank") 
+                                .image
+                                    img(src=`${item.src}`, alt="")
+                                    .link-icon
+                                        img(src="/assets/img/common/icon_link_sp-01.svg")
+                                .text-brock 
+                                    h3.title #{item.title}
+                                    p.taglist #{item.taglist}
+                                    p.url #{item.url}
+                                    p.date #{item.date}

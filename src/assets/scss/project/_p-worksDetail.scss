@@ -1,0 +1,121 @@
+.p-worksDetail {
+    margin-top: calc(60/320*100vw);
+    padding-bottom: calc(80/320*100vw);
+    @include pc {
+        margin-top: 100px;
+        padding-bottom: 125px;
+    }
+    .p-worksDetail__contents {
+        .p-worksDetail__head {
+            margin-left: calc(20/320*100vw);
+            margin-right: calc(20/320*100vw);
+            @include pc {
+                text-align: center;
+            }
+            .title {
+                font-size: calc(30/320*100vw);
+                font-weight: 300;
+                line-height: calc(40/30);
+                @include pc {
+                    font-size: 60px;
+                    line-height: calc(80/60);
+                }
+            }
+            .taglist,
+            .link {
+                font-size: calc(12/320*100vw);
+                font-weight: 300;
+                line-height: calc(14/12);
+                margin-top: calc(2/320*100vw);
+                @include pc {
+                    font-size: 20px;
+                    line-height: calc(24/20);
+                    margin-top: 4px;
+                }
+            }
+            .link {
+                text-decoration: underline 1px;
+            }
+        }
+        .p-worksDetail__body {
+            margin-top: calc(40/320*100vw);
+            @include pc {
+                margin-top: calc(60/1280*100vw);
+                margin-left: calc(40/1280*100vw);
+                margin-right: calc(40/1280*100vw);
+            }
+            .p-worksDetail__captures {
+                display: flex;
+                flex-wrap: wrap;
+                margin-bottom: calc(60/320*100vw);
+                @include pc {
+                    margin-bottom: 40px;
+                    width: 100%;
+                }
+                li {
+                    &.capture {
+                        &_pc {
+                            width: 100vw;
+                            @include pc {
+                                width: calc(640/1280*100vw);
+                            }
+                        }
+                        &_tb {
+                            margin-top: calc(6/320*100vw);
+                            width: calc(198/320*100vw);
+                            @include pc {
+                                margin-top: 0;
+                                margin-left: calc(10/1280*100vw);
+                                width: calc(340/1280*100vw);
+                            }
+                        }
+                        &_sp {
+                            margin-top: calc(6/320*100vw);
+                            margin-left: calc(6/320*100vw);
+                            width: calc(116/320*100vw);
+                            @include pc {
+                                margin-top: 0;
+                                margin-left: calc(10/1280*100vw);
+                                width: calc(200/1280*100vw);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .p-worksDetail__foot {
+            @include pc {
+                display: flex;
+                flex-wrap: wrap;
+                align-items: end;
+                margin-left: calc(40/1280*100vw);
+                margin-right: calc(40/1280*100vw);
+            }
+            .p-worksDetail__description {
+                font-size: calc(14/320*100vw);
+                font-weight: 300;
+                line-height: calc(26/14);
+                margin-left: calc(20/320*100vw);
+                margin-right: calc(20/320*100vw);
+                @include pc {
+                    font-size: calc(14/1280*100vw);
+                    line-height: calc(36/14);
+                    padding-left: calc(50/1280*100vw);
+                    margin-left: 0;
+                    margin-right: 0;
+                    order: 2;
+                    width: 50%;
+                }
+            }
+            .p-worksDetail__btnwrap {
+                margin-top: calc(60/320*100vw);
+                @include pc {
+                    margin-top: 0;
+                    order: 1;
+                    width: 50%;
+                }
+            }
+
+        }
+    }
+}

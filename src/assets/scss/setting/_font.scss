@@ -1,0 +1,17 @@
+// ==============================
+// Font
+// ==============================
+
+@import url('https://fonts.googleapis.com/css2?family=Shippori+Mincho&display=swap');
+//@include font-ja_regular;
+@mixin font-ja_regular {
+    font-family: 'Shippori Mincho', serif;
+    font-weight: 400;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300&display=swap');
+//@include font-en_light;
+@mixin font-en_light {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 300;
+}

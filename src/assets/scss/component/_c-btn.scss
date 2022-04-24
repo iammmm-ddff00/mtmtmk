@@ -1,0 +1,90 @@
+.c-btn {
+    border: 1px solid $color-global-border;
+    border-radius: calc(6/320*100vw);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: calc(8/320*100vw);
+    padding-bottom: calc(12/320*100vw);
+    position: relative;
+    text-decoration: none;
+    transition: ease .2s;
+    width: calc(240/320*100vw);
+
+    @include pc {
+        border-radius: 6px;
+        padding-top: 14px;
+        padding-bottom: 20px;
+        width: 320px;
+    }
+
+    .c-btn__text {
+        font-size: calc(28/320*100vw);
+        font-weight: 300;
+        @include pc {
+            font-size: 30px;
+        }
+    }
+
+    .c-btn__icon {
+        display: block;
+        margin-top: calc(12/320*100vw);
+        overflow: hidden;
+        position: relative;
+        height: calc(12/320*100vw);
+        width: calc(18/320*100vw);
+        @include pc {
+            margin-top: 12px;
+            height: 16px;
+            width: 24px;
+        }
+
+        &::before,
+        &::after {
+            content: "";
+            background-image: url("/assets/img/common/icon_arrow_brown-01.svg");
+            display: inline-block;
+            position: absolute;
+            transition: transform .8s;
+            transition-timing-function: cubic-bezier(0.15,   0.7,  0.5,  1);
+            height: calc(12/320*100vw);
+            width: calc(18/320*100vw);
+            @include pc {
+                height: 16px;
+                width: 24px;
+            }
+        }
+        &::before {
+            transform: translate3d(-3rem,0,0);
+        }
+        &::after {
+            transform: translate3d(0,0,0);
+        }
+    }
+    
+    &:hover {
+        .c-btn__icon {
+            &::before {
+                @include pc {
+                    transform: translate3d(0,0,0);
+                }
+            }
+            &::after {
+                @include pc {
+                    transform: translate3d(3rem,0,0);
+                }
+            }
+        }
+    }
+
+    // Arrow Left
+    &--left {
+        .c-btn__icon {
+            transform: rotate(180deg);
+        }
+    }
+}

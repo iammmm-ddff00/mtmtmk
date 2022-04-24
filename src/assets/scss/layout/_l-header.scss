@@ -1,0 +1,17 @@
+.l-header {
+    position: fixed;
+    top: 0;
+    padding: calc(15/320*100vw) calc(20/320*100vw);
+    width: 100%;
+    z-index: 1000;
+    @include pc {
+        padding: 20px 40px;
+    }
+    a {
+        display: block;
+        width: calc(48/320*100vw);
+        @include pc {
+            width: 105px;
+        }
+    }
+}

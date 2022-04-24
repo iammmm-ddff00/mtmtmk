@@ -1,0 +1,10 @@
+.c-title {
+    font-size: calc(60/320*100vw);
+    font-weight: 300;
+    line-height: 1;
+    text-align: center;
+    @include pc {
+        font-size: 160px;
+        transform-origin: top center;
+    }
+}

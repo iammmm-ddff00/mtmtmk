@@ -1,0 +1,22 @@
+extend _common/_layout
+
+append value
+    - var title= "matsumoto mika";
+    - var description= "";
+
+block content
+    .p-top
+        .p-top__contents
+            h1.p-top__title 
+                img(src="/assets/img/common/logo.svg")
+            h2.p-top__lead
+                | I’m Front End Developer,
+                br
+                | Web Creator.
+            p.p-top__text
+                | mika matsutmoto
+                br
+                | 1996 / from Osaka
+            a.c-btn.js-link(href="/works/")
+                span.c-btn__text Works
+                span.c-btn__icon 

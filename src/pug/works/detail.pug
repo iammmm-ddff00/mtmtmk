@@ -1,0 +1,31 @@
+extend ../_common/_layout
+
+append value
+    - var title= "detail | Works | matsumoto mika";
+    - var description= "ディスクリプション";
+
+block content
+    include ../_common/_header.pug
+    .p-worksDetail
+        .p-worksDetail__contents
+            .p-worksDetail__head
+                h1.title.js-page-title Works Name
+                p.taglist html / css / javascript
+                a.link.js-link(href="http://example.com/" target="_blank") http://example.com/
+            .p-worksDetail__body.js-trigger
+                ul.p-worksDetail__captures
+                    li.capture_pc: img(src="/assets/img/works/detail_sample_pc.jpg", alt="")
+                    li.capture_tb: img(src="/assets/img/works/detail_sample_tb.jpg", alt="")
+                    li.capture_sp: img(src="/assets/img/works/detail_sample_sp.jpg", alt="")
+            .p-worksDetail__foot
+                p.p-worksDetail__description
+                    | サイトの概要が入る予定。サイトの概要が入る予定。サイトの概要が入る予定。<br>
+                    | サイトの概要が入る予定。サイトの概要が入る予定。サイトの概要が入る予定。<br>
+                    | サイトの概要が入る予定。サイトの概要が入る予定。サイトの概要が入る予定。<br>
+                    | サイトの概要が入る予定。サイトの概要が入る予定。サイトの概要が入る予定。<br>
+                    | サイトの概要が入る予定。サイトの概要が入る予定。サイトの概要が入る予定。<br>
+                    | サイトの概要が入る予定。<br>
+                .p-worksDetail__btnwrap
+                    a.c-btn.c-btn--left.js-link(href="/works/")
+                        span.c-btn__text Works
+                        span.c-btn__icon 
